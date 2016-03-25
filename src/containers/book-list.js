@@ -32,9 +32,9 @@ function mapStateToProps(state) {
 		books: state.books
 	};
 }
-//does what it says; takes app state as an argument
-//and sets it as props to BookList
-//will be set === to this.props for the component itself
+// does what it says; takes app state as an argument
+// and sets it as props to BookList
+// will be set === to this.props for the component itself
 
 
 
@@ -51,6 +51,8 @@ function mapDispatchToProps(dispatch) {
 // Promote BookList from a component to a container - it needs to know about
 // dispatch method, selectBook. Make available as a prop
 export default connect(mapStateToProps, mapDispatchToProps)(BookList); //produces a container, a component aware of state contained by redux
+
+
 
 /* NOTES
 
