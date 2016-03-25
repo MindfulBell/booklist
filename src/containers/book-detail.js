@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class BookDetail extends Component {
     render() {
         if (!this.props.book) {
-            return <div>Select a book to get started!</div>
+            return <div>Select a book to get started!</div>;
         }
         return (
             <div>
@@ -12,14 +12,14 @@ class BookDetail extends Component {
                 <div>Title: {this.props.book.title}</div>
                 <div>Pages: {this.props.book.pages}</div>
             </div>
-            )
+            );
     }
 }
 
 function mapStateToProps(state){
     return {
-        book: state.activeBook // because this is what we wrote in state in our reducer! 
-    }
+        book: state.activeBook // because activeBook is what we wrote in state in our reducer! 
+    };
 }
 
-export default connect(mapStateToProps)(BookDetail)
+export default connect(mapStateToProps)(BookDetail);
